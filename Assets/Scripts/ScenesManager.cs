@@ -17,7 +17,8 @@ public class ScenesManager : MonoBehaviour
         MainMenu,
         Level1,
         Level2,
-        Level3
+        Level3,
+        HowToPlay
     }
 
     public void LoadScene(Scene scene)
@@ -40,5 +41,10 @@ public class ScenesManager : MonoBehaviour
     {
         PersistentData.Instance.ResetDate();
         SceneManager.LoadScene(Scene.MainMenu.ToString());
+    }
+
+    public void LoadTutorial()
+    {
+        SceneManager.LoadScene(Scene.HowToPlay.ToString());
     }
 }
